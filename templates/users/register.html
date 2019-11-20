@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{ info }}</p>
+<form method="post" action="{% url 'register' %}">
+     <span style="color: red">{{ info }}</span><br/>
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="username" ><br/>
+    <br/>
+    <input type="password" name="password" placeholder="password"><br/>
+    <br/>
+    <input type="submit" value="注册">
+</form>
+</body>
+</html>
